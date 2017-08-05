@@ -16,5 +16,5 @@ import java.util.List;
 public class News {
     private final String source;
     private final List<NewsArticle> articles;
-    private final String lastUpdated = LocalDateTime.now(ZoneId.of("GMT")).toString();;
+    private final String lastUpdated = LocalDateTime.now(ZoneId.of("GMT")).toString();
 }

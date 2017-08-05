@@ -6,7 +6,6 @@ import com.jamesbriangray.models.news.News;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import yahoofinance.YahooFinance;
 
 import java.util.List;
 import java.util.concurrent.Callable;

@@ -1,6 +1,8 @@
 package com.jamesbriangray.models.finance;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -16,5 +18,6 @@ public class StockUpdate implements Serializable {
     private final BigDecimal open;
     private final BigDecimal prevClose;
     private final BigDecimal change;
-    private final String lastUpdated = LocalDateTime.now(ZoneId.of("GMT")).toString();;
+    private final String lastUpdated = LocalDateTime.now(ZoneId.of("GMT")).toString();
+    ;
 }

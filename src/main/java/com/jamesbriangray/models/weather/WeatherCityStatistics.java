@@ -1,7 +1,6 @@
 package com.jamesbriangray.models.weather;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.RequiredArgsConstructor;
 import lombok.Value;
 
 @Value

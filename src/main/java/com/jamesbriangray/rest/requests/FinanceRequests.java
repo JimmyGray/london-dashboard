@@ -2,15 +2,12 @@ package com.jamesbriangray.rest.requests;
 
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Callables;
-import lombok.SneakyThrows;
 import com.jamesbriangray.models.finance.StockUpdate;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 import yahoofinance.Stock;
 import yahoofinance.YahooFinance;
 
-import java.time.Clock;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.List;
 import java.util.concurrent.Callable;
 

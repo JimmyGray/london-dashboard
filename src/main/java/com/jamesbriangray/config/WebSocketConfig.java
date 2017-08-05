@@ -17,8 +17,6 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
         registry.addEndpoint("/updates").setAllowedOrigins("*").withSockJS();
     }
 
-
-
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         registry.enableSimpleBroker(MESSAGE_PREFIX);

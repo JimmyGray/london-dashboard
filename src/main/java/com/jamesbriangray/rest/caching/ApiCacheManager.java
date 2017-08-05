@@ -5,21 +5,18 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListenableFutureTask;
 import com.jamesbriangray.config.EventHandler;
+import com.jamesbriangray.rest.requests.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import com.jamesbriangray.rest.requests.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -44,12 +41,12 @@ public class ApiCacheManager {
 
     private LoadingCache<String, List<?>> initializeLoadingCache() {
         return CacheBuilder.newBuilder()
-            .refreshAfterWrite(2, TimeUnit.MINUTES)
-            .build(getConfiguredAsyncCacheLoader());
+                .refreshAfterWrite(2, TimeUnit.MINUTES)
+                .build(getConfiguredAsyncCacheLoader());
     }
 
     private List<?> getApiCall(String key) {
-        switch(key) {
+        switch (key) {
             case "financeRequest":
                 return processRequest(key, financeRequests.returnFTSEStock());
             case "newsRequest":
@@ -62,7 +59,8 @@ public class ApiCacheManager {
                 return processRequest(key, twitterRequests.returnLondonTwitterTrends());
             case "weatherRequest":
                 return processRequest(key, weatherRequests.retrieveLondonCityWeather());
-            default: throw new IllegalArgumentException();
+            default:
+                throw new IllegalArgumentException();
         }
     }
 
@@ -108,6 +106,7 @@ public class ApiCacheManager {
                 EXECUTOR.submit(cacheKeyLoadingTask);
                 return cacheKeyLoadingTask;
             }
+
             @Override
             public List<?> load(String key) {
                 return getApiCall(key);

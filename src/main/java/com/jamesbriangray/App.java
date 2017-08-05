@@ -1,14 +1,14 @@
 package com.jamesbriangray;
 
+import com.jamesbriangray.rest.caching.ApiCacheManager;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import com.jamesbriangray.rest.caching.ApiCacheManager;
 
 @SpringBootApplication
 @EnableCaching

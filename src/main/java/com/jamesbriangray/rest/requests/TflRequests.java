@@ -19,10 +19,12 @@ public class TflRequests {
     private final String NATIONAL_RAIL_URL = BASE_URL + "national-rail/status";
 
     public Callable<List<?>> retrieveTubeStatus() {
-        return Callables.returning(restTemplate.exchange(TFL_URL, HttpMethod.GET, null, new ParameterizedTypeReference<List<TflStatus>>() {}).getBody());
+        return Callables.returning(restTemplate.exchange(TFL_URL, HttpMethod.GET, null, new ParameterizedTypeReference<List<TflStatus>>() {
+        }).getBody());
     }
 
     public Callable<List<?>> retrieveNationRailWayStatus() {
-        return Callables.returning(restTemplate.exchange(NATIONAL_RAIL_URL, HttpMethod.GET, null, new ParameterizedTypeReference<List<TflStatus>>() {}).getBody());
+        return Callables.returning(restTemplate.exchange(NATIONAL_RAIL_URL, HttpMethod.GET, null, new ParameterizedTypeReference<List<TflStatus>>() {
+        }).getBody());
     }
 }

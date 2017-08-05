@@ -1,9 +1,7 @@
 package com.jamesbriangray.models.news;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Builder;
 import lombok.Value;
-
 
 @Value
 @JsonIgnoreProperties(ignoreUnknown = true)

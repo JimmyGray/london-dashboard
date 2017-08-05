@@ -14,5 +14,6 @@ public class TwitterTrend {
     private final String name;
     private final String url;
     private final String query;
-    private final String lastUpdated = LocalDateTime.now(ZoneId.of("GMT")).toString();;
+    private final String lastUpdated = LocalDateTime.now(ZoneId.of("GMT")).toString();
+    ;
 }

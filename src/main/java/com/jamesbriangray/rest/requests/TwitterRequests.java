@@ -1,10 +1,12 @@
 package com.jamesbriangray.rest.requests;
 
 import com.google.common.util.concurrent.Callables;
-import lombok.SneakyThrows;
 import com.jamesbriangray.models.twitter.TwitterTrend;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
-import twitter4j.*;
+import twitter4j.Trends;
+import twitter4j.Twitter;
+import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
 import java.util.Arrays;
@@ -29,10 +31,10 @@ public class TwitterRequests {
     private List<TwitterTrend> returnTwitterTrendFromTrends(Trends trends) {
         return Arrays.stream(trends.getTrends())
                 .map(trend -> TwitterTrend.builder()
-                    .name(trend.getName())
-                    .url(trend.getURL())
-                    .query(trend.getQuery())
-                    .build())
+                        .name(trend.getName())
+                        .url(trend.getURL())
+                        .query(trend.getQuery())
+                        .build())
                 .collect(Collectors.toList());
     }
 

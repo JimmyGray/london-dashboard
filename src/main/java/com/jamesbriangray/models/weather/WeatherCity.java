@@ -18,5 +18,6 @@ public class WeatherCity {
     private final String name;
     private final WeatherCityStatistics main;
     private final List<Weather> weather;
-    private final String lastUpdated = LocalDateTime.now(ZoneId.of("GMT")).toString();;
+    private final String lastUpdated = LocalDateTime.now(ZoneId.of("GMT")).toString();
+    ;
 }
