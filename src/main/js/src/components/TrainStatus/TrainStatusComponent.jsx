@@ -1,7 +1,6 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import trainStyles from './TrainStatusStyles.scss'
-import {removeDateFromDateTime} from "../../transform/dateTimeTransformers";
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import { removeDateFromDateTime } from '../../transform/dateTimeTransformers';
 import classNames from 'classnames';
 
 export default class TrainStatusComponent extends React.Component {
@@ -46,11 +45,3 @@ export default class TrainStatusComponent extends React.Component {
         })
     }
 };
-
-// id:"abellio-greater-anglia"
-// name:"Abellio Greater Anglia"
-// modeName:"national-rail"
-// ▶lineStatuses:[] 1 item
-// ▶0:{} 2 keys
-// statusSeverity:10
-// statusSeverityDescription:"Good Service"

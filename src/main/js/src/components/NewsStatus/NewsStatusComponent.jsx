@@ -1,7 +1,6 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import {removeDateFromDateTime} from "./../../transform/dateTimeTransformers";
-import styles from './NewsStatusStyles.scss';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import { removeDateFromDateTime } from './../../transform/dateTimeTransformers';
 
 export default class NewsStatusComponent extends React.Component {
 
@@ -62,12 +61,3 @@ export default class NewsStatusComponent extends React.Component {
         return this.props.data[0] ? true : false;
     }
 };
-
-// "articles": [
-//     {
-//         "author": "https:www.facebook.com/bbcnews",
-//         "title": "Donald Trump protests: Washington leads global rallies",
-//         "description": "Hundreds of thousands take part in a \"Women's March\" in Washington as part of a global day of action.",
-//         "url": "http:www.bbc.co.uk/news/world-us-canada-38705586",
-//         "urlToImage": "http:ichef.bbci.co.uk/news/1024/cpsprodpb/10E71/production/_93733296_mediaitem93733295.jpg"
-//     },

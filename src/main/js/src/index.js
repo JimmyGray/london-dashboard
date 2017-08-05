@@ -1,11 +1,11 @@
 import React from 'react';
-import { addUpdate } from "./actions/WebSocketAction";
+import { addUpdate } from './actions/WebSocketAction';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import reducer from './reducers/WebSocketUpdateReducer'
-import App from './components/App.jsx'
-import _ from 'lodash'
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducer from './reducers/WebSocketUpdateReducer';
+import App from './components/App.jsx';
+import _ from 'lodash';
 import { Map } from 'immutable';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -32,8 +32,8 @@ function register() {
 }
 
 
-const onmessage = function(message) {
-    const url = message.headers.destination.replace(/\/topic\//g,'');
+const onmessage = function (message) {
+    const url = message.headers.destination.replace(/\/topic\//g, '');
     const updatedMap = Map();
     const updated = updatedMap.set(url, JSON.parse(message.body));
     store.dispatch(addUpdate(updated));
@@ -42,13 +42,13 @@ const onmessage = function(message) {
 sock.onopen = () => {
     fetch('http://localhost:8080/updates/')
         .then(
-            function(response) {
+            function (response) {
                 if (response.status !== 200) {
                     console.log('Looks like there was a problem. Status Code: ' +
                         response.status);
                     return;
                 }
-                response.json().then(function(data) {
+                response.json().then(function (data) {
                     _.forIn(data, (value, key) => {
                         const updatedMap = Map();
                         const updated = updatedMap.set(key, value);
@@ -57,7 +57,7 @@ sock.onopen = () => {
                 });
             }
         )
-        .catch(function(err) {
+        .catch(function (err) {
             console.log('Fetch Error :-S', err);
         });
 };

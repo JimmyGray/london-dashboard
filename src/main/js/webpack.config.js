@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -10,7 +9,6 @@ module.exports = {
         filename: "bundle.js"
     },
     resolve: {
-        // Add '.ts' and '.tsx' as a resolvable extension.
         extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
     module: {
@@ -59,14 +57,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("[name].css"),
-        // new BrowserSyncPlugin({
-        //     // browse to http://localhost:3000/ during development,
-        //     // ./public directory is being served
-        //     host: 'localhost',
-        //     port: 3000,
-        //     server: {baseDir: ['./dist/public']}
-        // })
+        new ExtractTextPlugin("[name].css")
     ]
 };
 

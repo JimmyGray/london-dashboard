@@ -1,5 +1,5 @@
 import { List, Map } from 'immutable';
-import { ADD_UPDATE } from "../actions/WebSocketAction";
+import { ADD_UPDATE } from '../actions/WebSocketAction';
 const intitialState = Map();
 
 export default function reducer(state = intitialState, action) {

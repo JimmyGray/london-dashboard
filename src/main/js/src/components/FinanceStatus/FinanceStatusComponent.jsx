@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-import styles from '../common/CardStyles.scss';
-import { removeDateFromDateTime } from "../../transform/dateTimeTransformers";
+import { removeDateFromDateTime } from '../../transform/dateTimeTransformers';
 
 
 export default class FinanceStatusComponent extends React.Component {
 
-    componentWillReceiveProps() {}
+    componentWillReceiveProps() {
+    }
 
     render() {
         return this.renderCard();
@@ -29,7 +29,7 @@ export default class FinanceStatusComponent extends React.Component {
 
     renderCardHeaderLastUpdated() {
         if (this.props.data && this.props.data.length > 0) {
-            return(
+            return (
                 <span className={'card-header-last-checked'}>
                         last updated: {removeDateFromDateTime(this.props.data[0].lastUpdated)}
                 </span>

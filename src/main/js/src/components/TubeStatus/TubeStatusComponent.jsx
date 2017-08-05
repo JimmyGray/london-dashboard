@@ -1,7 +1,6 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-// import styles from './TubeStatusStyles.scss';
-import {removeDateFromDateTime} from "../../transform/dateTimeTransformers";
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import { removeDateFromDateTime } from '../../transform/dateTimeTransformers';
 import classNames from 'classnames';
 
 export default class TubeStatusComponent extends React.Component {

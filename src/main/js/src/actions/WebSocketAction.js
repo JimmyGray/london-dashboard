@@ -1,7 +1,3 @@
-/*
- * action types
- */
-
 export const ADD_UPDATE = 'ADD_UPDATE'
 
 export const addUpdate = (incomingUpdate) => {
