@@ -4,7 +4,10 @@
   "description": "london-dashboard",
   "license": "MIT",
   "main": "src/index.ts",
-  "repository": "yeah",
+  "repository":
+  { "type" : "git",
+    "url" : "https://github.com/JimmyGray/london-dashboard.git"
+  },
   "private": true,
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -58,7 +61,7 @@
     "url-loader": "^0.5.8"
   },
   "scripts": {
-    "watch": "webpack -d --watch",
+    "build": "webpack -d --watch",
     "dev-build": "webpack -d --display-modules",
     "prod-build": "webpack -d -p"
   }
