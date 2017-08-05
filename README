@@ -1,0 +1,8 @@
+#API's
+##TFL
+- https://api-portal.tfl.gov.uk/docs {}
+## OpenWeatherMap
+- https://home.openweathermap.org {bc5ba0743164d6e55060d3c78fde5442}
+
+
+mvn clean package spring-boot:run

@@ -1,0 +1,77 @@
+.trainRow {
+  height: 2rem;
+  text-align: center;
+}
+
+.statusIndicator {
+  height: 100%;
+  background-color: red;
+}
+
+.trainStatusCard > div {
+  padding: 0!important;
+}
+
+.trainStatusContainer {
+  align-items: center;
+  height: 2.8rem;
+}
+
+.trainTableContainer {
+  padding: 0 !important;
+}
+
+.bakerloo {
+  background-color: #894E24;
+  color: white;
+}
+
+.central {
+  background-color: #DC241F;
+  color: white;
+}
+
+.district {
+  background-color: #007229;
+  color: white;
+}
+
+.circle {
+  background-color: #FFCE00;
+  color: black;
+}
+
+.hammersmith-city {
+  background-color: #D799AF;
+  color: black;
+}
+
+.jubilee {
+  background-color: #6A7278;
+  color: white;
+}
+
+.metropolitan {
+  background-color: #5F0D46;
+  color: white;
+}
+
+.northern {
+  background-color: #000000;
+  color: white;
+}
+
+.piccadilly {
+  background-color: #0019A8;
+  color: white;
+}
+
+.victoria {
+  background-color: #00A0E2;
+  color: black;
+}
+
+.waterloo-city {
+  background-color: #76D0BD;
+  color: black;
+}

@@ -1,0 +1,22 @@
+* {
+  margin-right: 0!important;
+  margin-left: 0!important;
+}
+
+.card-header {
+  background-color: #03A9F4;
+  color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    padding-right: 0!important;
+  }
+}
+
+.card-header-last-checked {
+  color: #FAFAFA;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 12px;
+}
